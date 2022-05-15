@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MyActivity</string>
+    <string name="next_activity">next window</string>
+    <string name="buttonBack">back</string>
+    <string name="editText">текст для второго окна</string>
+    <string name="red">red</string>
+    <string name="green">green</string>
+    <string name="blue">blue</string>
 </resources>
