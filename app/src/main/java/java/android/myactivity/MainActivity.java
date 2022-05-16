@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         findViewById(R.id.buttonNextWindow).setOnClickListener(this);
+        findViewById(R.id.buttonCalculatorOut).setOnClickListener(this);
         editText = findViewById(R.id.editText);
     }
 
@@ -28,6 +29,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(MainActivity.this,MainActivity2.class);
             intent.putExtra(KEY,editText.getText().toString());
             startActivity(intent);
+        }
+
+        switch (view.getId()){
+            case R.id.buttonNextWindow:
+                Intent intent = new Intent(MainActivity.this,MainActivity2.class);
+                intent.putExtra(KEY,editText.getText().toString());
+                startActivity(intent);
+                break;
+
+            case R.id.buttonCalculatorOut:
+                Intent intentCalc = new Intent("android.intent.action.CALCULATOR");
+                startActivity(intentCalc);
+                break;
         }
     }
 }
